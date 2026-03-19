@@ -1,5 +1,5 @@
-text = 'total growth is 300%'
+def sms_check(text):
+    return text[:160]
 
 
-for k in range(len(text.split()) - 1, -1, -1):
-    print(text.split()[k], end=' ')
+print(sms_check('yriutrtiuiu'))

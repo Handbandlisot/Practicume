@@ -1,12 +1,15 @@
-s = 'ututututfddfs'
-t = 'otiyryjhgf'
-r = 'nmcvbniigjh'
-k = []
-for i in s + t + r:
-    if s.count(i) > 0 and (t + r).count(i) == 0:
-        k.append(i)
-    elif t.count(i) > 0 and (r + s).count(i) == 0:
-        k.append(i)
-    elif (s + t).count(i) == 0 and r.count(i) > 0:
-        k.append(i)
-print(set(k))
+def phone_card():
+    cost = int(input())
+    if cost == 5 or cost == 10:
+        return cost
+    elif cost == 25:
+        return cost + 3
+    elif cost == 50:
+        return cost + 8
+    elif cost == 100:
+        return cost + 20
+    else:
+        print('Wrong card cost')
+
+
+phone_card()

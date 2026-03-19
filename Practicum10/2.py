@@ -1,11 +1,12 @@
-text = 'hahafffffffff text about spaces oo000000hohoh     '
+def fib(number):
+    first_num = 1
+    second_num = 1
+    print(first_num, second_num, end=' ')
+    for _ in range(number - 2):
+        between_num = first_num + second_num
+        print(between_num, end=' ')
+        first_num = second_num
+        second_num = between_num
 
-c = 1
-k = 1
-for i in range(len(text) - 1):
-    if text[i] == text[i + 1]:
-        c += 1
-        k = max(k, c)
-    else:
-        c = 1
-print(k)
+
+fib(10)

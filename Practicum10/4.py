@@ -1,6 +1,12 @@
-text = 'hahafffffffff text bou spaces oo000000hohoh     '
+def make_payment(P):
+    try:
+        P = int(P)
+        if P > 1000 or P < 20:
+            print('Повторить попытку')
+        else:
+            print('Успех')
+    except ValueError:
+        print('Повторить попытку')
 
-for i in text:
-    if text.count(i) == 3:
-        print(i)
-        break
+
+make_payment(35)
