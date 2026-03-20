@@ -1,13 +1,56 @@
-import keyword as k
+import turtle
 
-def check(name):
-    if k.iskeyword(name):
-        return False
-    return name.isidentifier()
+screen = turtle.Screen()
+screen.bgcolor("white")
+t = turtle.Turtle()
+t.speed(0)
 
-name = str(input('Введите предпологаемое имя: '))
 
-if check(name):
-    print(f'{name} - допустимое имя в Python')
-else:
-    print(f'{name} - недопустимое имя в Python')
+def draw_square(size, color):
+    t.fillcolor(color)
+    t.begin_fill()
+    for _ in range(4):
+        t.forward(size)
+        t.left(90)
+    t.end_fill()
+
+def draw_rhombus(size, color):
+    t.fillcolor(color)
+    t.begin_fill()
+    for _ in range(2):
+        t.forward(size)
+        t.left(60)
+        t.forward(size)
+        t.left(120)
+    t.end_fill()
+
+def draw_flower_element(size, color):
+    t.fillcolor(color)
+    t.begin_fill()
+    t.circle(size / 2)
+    t.end_fill()
+
+def move_to(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+
+
+start_x = -250
+y_position = 0
+step = 100
+
+for i in range(5):
+    curr_x = start_x + (i * step)
+    
+    move_to(curr_x, y_position)
+    draw_square(80, "#FFD700")
+    
+    move_to(curr_x + 10, y_position + 10)
+    draw_rhombus(40, "#FF4500")
+    
+    move_to(curr_x + 40, y_position + 30)
+    draw_flower_element(30, "#6D0A8B")
+
+t.hideturtle()
+screen.mainloop()

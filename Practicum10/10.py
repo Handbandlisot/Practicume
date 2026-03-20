@@ -1,13 +1,10 @@
-def not_again(word):
-    for i in word:
-        if word.count(i) == 1:
-            pass
-        else:
-            return False
-    return True
+def check_of_numbers(num_a, num_b):
+    if num_a > num_b:
+        num_a, num_b = num_b, num_a
+    statement = set({1, 3, 4, 8, 9})
+    for number in range(num_a, num_b + 1):
+        if len(list(condition for condition in statement if str(condition) in str(number))) == len(statement):
+            print(number, end=' ')
 
-text = "easy isn't always easy"
 
-for i in text.split():
-    if i != text.split()[0] and not_again(i):
-        print(i, end=' ')
+check_of_numbers(10000, 14000)

@@ -1,14 +1,45 @@
-def happy(number):
-    if sum(int(x) for x in number[:len(number) // 2]) == sum(int(x) for x in number[len(number) // 2:]):
-        return True
-    return False
+import turtle
+
+t = turtle.Turtle()
+t.speed(0)
+turtle.bgcolor("#f0f0f0")
 
 
-order = 0
-while True:
-    order += 1
-    number = str(input('Номер билета: '))
-    if len(number) % 2 == 0:
-        if happy(number):
-            print(order)
-            break
+def draw_triangle(p1, p2, p3, color):
+    t.penup()
+    t.goto(p1)
+    t.pendown()
+    t.fillcolor(color)
+    t.begin_fill()
+    t.goto(p2)
+    t.goto(p3)
+    t.goto(p1)
+    t.end_fill()
+
+def draw_square_from_triangles(x, y, size, color1, color2):
+    v_top_left = (x, y + size)
+    v_top_right = (x + size, y + size)
+    v_bottom_left = (x, y)
+    v_bottom_right = (x + size, y)
+    
+    draw_triangle(v_bottom_left, v_top_left, v_top_right, color1)
+    draw_triangle(v_bottom_left, v_bottom_right, v_top_right, color2)
+
+def draw_tile_pattern(rows, cols, size):
+    colors = ["#2E8B57", "#4682B4", "#CD5C5C", "#DAA520"]
+    
+    for row in range(rows):
+        for col in range(cols):
+            x = col * size - (cols * size / 2)
+            y = row * size - (rows * size / 2)
+            
+            c1 = colors[(row + col) % len(colors)]
+            c2 = colors[(row * col + 1) % len(colors)]
+            
+            draw_square_from_triangles(x, y, size, c1, c2)
+
+
+draw_tile_pattern(5, 5, 60)
+
+t.hideturtle()
+turtle.done()
