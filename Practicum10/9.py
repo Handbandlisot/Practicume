@@ -17,10 +17,12 @@ def second_counter(time: str):
     date = time[0].split('/')
     time_of_date = time[1].split(':')
     months = months_leap(is_leap(int(date[2])))
+
     days = int(date[1]) + months[int(date[0]) - 1]
     days_second = (days - 1) * 24 * 60 * 60
     time_second = int(time_of_date[0]) * 60 * 60
     time_second += int(time_of_date[1]) * 60 + int(time_of_date[2])
+    
     return days_second + time_second
 
 

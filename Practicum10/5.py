@@ -1,5 +1,6 @@
 def phone_card():
     cost = int(input())
+    
     if cost == 5 or cost == 10:
         return cost
     elif cost == 25:
