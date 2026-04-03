@@ -10,6 +10,9 @@ t.hideturtle()
 
 
 def draw_stars(count):
+    '''
+    Draws stars
+    '''
     for _ in range(count):
         x = random.randint(-400, 400)
         y = random.randint(-100, 300)
@@ -19,6 +22,9 @@ def draw_stars(count):
         t.dot(random.randint(1, 3), "white")
 
 def draw_windows(start_x, start_y, width, height):
+    '''
+    Draws window
+    '''
     window_size = 10
     padding = 15
     
@@ -36,6 +42,9 @@ def draw_windows(start_x, start_y, width, height):
                 t.end_fill()
 
 def draw_building(x, y, width, height, color="#1A1A1A"):
+    '''
+    Draws building
+    '''
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -51,6 +60,9 @@ def draw_building(x, y, width, height, color="#1A1A1A"):
     draw_windows(x, y, width, height)
 
 def create_cityscape():
+    '''
+    Creates cityscapes
+    '''
     draw_stars(80)
     
     current_x = -400

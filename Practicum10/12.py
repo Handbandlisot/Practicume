@@ -7,6 +7,9 @@ t.speed(0)
 
 
 def draw_square(size, color):
+    '''
+    Draws square
+    '''
     t.fillcolor(color)
     t.begin_fill()
     for _ in range(4):
@@ -15,6 +18,9 @@ def draw_square(size, color):
     t.end_fill()
 
 def draw_rhombus(size, color):
+    '''
+    Draws rhombus
+    '''
     t.fillcolor(color)
     t.begin_fill()
     for _ in range(2):
@@ -25,12 +31,18 @@ def draw_rhombus(size, color):
     t.end_fill()
 
 def draw_flower_element(size, color):
+    '''
+    Draws flower element
+    '''
     t.fillcolor(color)
     t.begin_fill()
     t.circle(size / 2)
     t.end_fill()
 
 def move_to(x, y):
+    '''
+    Moves turtle to coordinates
+    '''
     t.penup()
     t.goto(x, y)
     t.pendown()

@@ -1,7 +1,14 @@
 def is_leap(year):
+    '''
+    Check if the year is leap
+    '''
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 def months_leap(is_leap):
+    '''
+    Check if the year is leap 
+    and return months based on the answer
+    '''
     if is_leap:
         months = [31, 29, 31, 30, 
                   31, 30, 31, 31, 
@@ -14,6 +21,9 @@ def months_leap(is_leap):
     return months
 
 def time_changer(time: str):
+    '''
+    Changes time to American standard
+    '''
     try:
         time = time.split(' ')
         date = time[0].split('/')

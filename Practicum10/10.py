@@ -1,4 +1,7 @@
 def check_of_numbers(num_a, num_b):
+    '''
+    Finds all numbers that have digits from the set
+    '''
     if num_a > num_b:
         num_a, num_b = num_b, num_a
 

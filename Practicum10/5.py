@@ -1,4 +1,7 @@
 def phone_card():
+    '''
+    Enters an amount and displays a value based on it
+    '''
     cost = int(input())
     
     if cost == 5 or cost == 10:

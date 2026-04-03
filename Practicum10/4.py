@@ -1,4 +1,7 @@
 def make_payment(P):
+    '''
+    Makes a payment and checks its success
+    '''
     try:
         P = int(P)
         if P > 1000 or P < 20:

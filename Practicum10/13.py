@@ -6,6 +6,9 @@ turtle.bgcolor("#f0f0f0")
 
 
 def draw_triangle(p1, p2, p3, color):
+    '''
+    Draws triangle
+    '''
     t.penup()
     t.goto(p1)
     t.pendown()
@@ -17,6 +20,9 @@ def draw_triangle(p1, p2, p3, color):
     t.end_fill()
 
 def draw_square_from_triangles(x, y, size, color1, color2):
+    '''
+    Draws square from triangles
+    '''
     v_top_left = (x, y + size)
     v_top_right = (x + size, y + size)
     v_bottom_left = (x, y)
@@ -26,6 +32,9 @@ def draw_square_from_triangles(x, y, size, color1, color2):
     draw_triangle(v_bottom_left, v_bottom_right, v_top_right, color2)
 
 def draw_tile_pattern(rows, cols, size):
+    '''
+    Draws tile pattern
+    '''
     colors = ["#2E8B57", "#4682B4", "#CD5C5C", "#DAA520"]
     
     for row in range(rows):

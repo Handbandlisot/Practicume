@@ -1,4 +1,7 @@
 def vow_and_con(text):
+    '''
+    Count how many vowels and consonants in text
+    '''
     vowels = ['а', 'е', 'ё', 'и', 'о',
               'у', 'ы', 'э', 'ю', 'я']
     

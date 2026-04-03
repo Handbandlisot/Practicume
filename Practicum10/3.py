@@ -1,4 +1,7 @@
 def discount(cost: int, card: bool, holiday: bool):
+    '''
+    Count the discount amount
+    '''
     discount = 0
     
     if card:

@@ -1,4 +1,7 @@
 def dividers(number):
+    '''
+    Finds dividers of number
+    '''
     div = []
 
     for num in range(1, int(number ** 0.5) + 1):
@@ -9,6 +12,9 @@ def dividers(number):
     return sorted(div)
 
 def common_multiples(a, b, n):
+    '''
+    Displays common multiples to n
+    '''
     a_div = dividers(a)
     b_div = dividers(b)
     

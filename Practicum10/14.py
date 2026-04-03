@@ -1,7 +1,7 @@
 def boyer_moore_find(text, pattern, start=0, end=None):
-    """
-    Аналог метода find, использующий упрощенный алгоритм Бойера-Мура.
-    """
+    '''
+    An analogue of the find method that uses a simplified Boyer-Moore algorithm.
+    '''
     if end is None:
         end = len(text)
     
@@ -38,9 +38,9 @@ def boyer_moore_find(text, pattern, start=0, end=None):
     return -1
 
 def find_all_occurrences(text, pattern):
-    """
-    Возвращает строку с индексами всех вхождений, разделенных запятой.
-    """
+    '''
+    Returns a string with the indices of all occurrences, separated by commas.
+    '''
     indices = []
     current_pos = 0
     

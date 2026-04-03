@@ -1,4 +1,7 @@
 def fib(number):
+    '''
+    Print the first Fibonacci numbers
+    '''
     first_num = 1
     second_num = 1
     print(first_num, second_num, end=' ')

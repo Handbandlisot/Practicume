@@ -1,4 +1,7 @@
-def simple(number):
+def prime(number):
+    '''
+    Check if the number is prime
+    '''
     for div in range(2, int(number ** 0.5) + 1):
         if number % div == 0:
             return False
@@ -7,5 +10,5 @@ def simple(number):
 
 n = int(input())
 for number in range(1, n):
-    if simple(number):
+    if prime(number):
         print(number, end=' ')

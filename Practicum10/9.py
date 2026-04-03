@@ -1,7 +1,9 @@
 def is_leap(year):
+    '''Check if the year is leap'''
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 def months_leap(is_leap):
+    '''Check if the year is leap and return months based on the answer'''
     if is_leap:
         months = [0, 31, 60, 91, 
                   121, 152, 182, 213, 
@@ -12,7 +14,11 @@ def months_leap(is_leap):
                   243, 273, 304, 334] 
     return months
 
-def second_counter(time: str):
+def seconds_counter(time: str):
+    '''
+    Counts how many seconds have passed 
+    since the beginning of the year to the time
+    '''
     time = time.split(' ')
     date = time[0].split('/')
     time_of_date = time[1].split(':')
@@ -26,4 +32,4 @@ def second_counter(time: str):
     return days_second + time_second
 
 
-print(second_counter("03/20/2026 10:07:40"))
+print(seconds_counter("03/20/2026 10:07:40"))
